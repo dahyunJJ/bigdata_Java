@@ -36,12 +36,18 @@ public class Switch03 {
 			System.out.println(num1 + oper + num2 + " = " +  (num1 * num2));
 			break;
 		case "/" :
+			
+			if (num2 == 0) {
+				System.out.println("0으로는 나눌 수 없습니다!");
+				break;
+			}
+			
 			System.out.println(num1 + oper + num2 + " = " +  (num1 / num2));
 			break;
 			
 		default :
 			System.out.println("다음의 연산자 중에서 선택해주세요. [ +, -, *, / ]");
-			break;
+			// default에는 break 작성안해도 된다.
 		}
 
 		sc.close();
