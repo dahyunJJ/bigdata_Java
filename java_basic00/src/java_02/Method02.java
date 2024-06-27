@@ -1,4 +1,4 @@
-package java_basic02;
+package java_02;
 
 public class Method02 {
 
