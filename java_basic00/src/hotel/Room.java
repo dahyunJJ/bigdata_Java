@@ -12,14 +12,17 @@ public class Room {
 		
 	}
 	
+	// 매개 변수 생성자
 	public Room(boolean isUsing) {
 		this.isUsing = isUsing;
 	}
 
+	// Getter 메소드
 	public boolean isUsing() {
 		return isUsing;
 	}
-
+	
+	// Setter 메소드
 	public void setUsing(boolean isUsing) {
 		this.isUsing = isUsing;
 	}
