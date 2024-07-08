@@ -1,6 +1,7 @@
 package java_06;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -28,16 +29,32 @@ public class MapCollection {
 
 		// 지역번호 입력 : 031
 		// 입력하신 지역번호에 대한 지역은 : 경기도
-		while (true) {
-			System.out.print("지역번호 입력 : ");
-			String num = sc.next();
-			if (num.equals("exit"))
-				break;
-			if (regionNum.get(num) == null) {
-				System.out.println("존재하지 않는 지역입니다.");
-				continue;
+//		while (true) {
+//			System.out.print("지역번호 입력 : ");
+//			String num = sc.next();
+//			if (num.equals("exit"))
+//				break;
+//			if (regionNum.get(num) == null) {
+//				System.out.println("존재하지 않는 지역입니다.");
+//				continue;
+//			}
+//			System.out.println("입력하신 지역번호에 대한 지역은 : " + regionNum.get(num));
+//		}
+		
+		
+		
+		// Iterator : hashMap의 모든 key를 Set의 형태로 반환하는 인터페이스
+		Iterator<String> keyIt = regionNum.keySet().iterator();
+		
+		// hasNext() : keyIt 안에 다음 행이 있으면 true이므로 반복문 계속 실행, 다음 행이 없을 때까지(false)
+		while (keyIt.hasNext()) {
+			String regNum = keyIt.next();
+			
+			if("02".equals(regNum)) {
+				
 			}
-			System.out.println("입력하신 지역번호에 대한 지역은 : " + regionNum.get(num));
+			
+			System.out.println(regionNum.get(regNum));
 		}
 	}
 }
