@@ -54,7 +54,7 @@ public class MemberService {
 				count++;
 				break;
 			default :
-				// "잘못된 숫자가 입력됨. 1~6 사이의 숫자 입력 가능");
+				displayMsg("잘못된 숫자가 입력됨. 1~6 사이의 숫자 입력 가능");
 				break;
 			}
 
